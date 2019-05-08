@@ -32,3 +32,20 @@
     background-color: @link-active;
   }
 }
+
+.navigation--lecture .navigation__link {
+  padding: 20px 40px;
+
+  &:hover,
+  &:focus {
+    background-color: @lecture-link-hover;
+  }
+
+  &:active {
+    background-color: @lecture-link-active;
+  }
+}
+
+.navigation--lecture .navigation__item:first-child .navigation__link{
+  margin-right: 70px;
+}
