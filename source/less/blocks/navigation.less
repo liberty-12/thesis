@@ -1,5 +1,5 @@
 .navigation {
-  margin: 0 auto;
+  margin-left: auto;
 }
 
 .navigation__list {
@@ -14,38 +14,25 @@
 .navigation__link {
   display: block;
 
-  padding: 43px 45px;
+  padding: 20px 20px;
 
-  font-family: "Gilroy", "Arial", sans-serif;
-  font-weight: 900;
-  font-size: 20px;
-  color: rgba(0, 0, 0, 0.9);
-  text-transform: uppercase;
+  font-family: "OpenSans", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #000000;
+  // text-transform: uppercase;
   text-decoration: none;
 
   &:hover,
   &:focus {
-    background-color: @link-hover;
+
   }
 
   &:active {
-    background-color: @link-active;
+
   }
 }
 
-.navigation--lecture .navigation__link {
-  padding: 20px 40px;
-
-  &:hover,
-  &:focus {
-    background-color: @lecture-link-hover;
-  }
-
-  &:active {
-    background-color: @lecture-link-active;
-  }
-}
-
-.navigation--lecture .navigation__item:first-child .navigation__link{
-  margin-right: 70px;
+.navigation__item:last-child .navigation__link {
+  margin-right: 0;
 }
