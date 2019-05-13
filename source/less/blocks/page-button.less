@@ -1,0 +1,37 @@
+.page-button--up {
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+
+  width: 40px;
+  height: 40px;
+
+  background-color: #f5f2f0;
+}
+
+.page-button--up::before,
+.page-button--up::after {
+  content: "";
+
+  position: absolute;
+
+  width: 19px;
+  height: 5px;
+
+  border-radius: 50px;
+  background-color: #000000;
+}
+
+.page-button--up::before {
+  top: 15px;
+  left: 16px;
+
+  transform: rotate(45deg);
+}
+
+.page-button--up::after {
+  top: 15px;
+  left: 6px;
+
+  transform: rotate(-45deg);
+}
