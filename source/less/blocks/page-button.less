@@ -1,16 +1,5 @@
-.page-button--up {
-  position: fixed;
-  bottom: 40px;
-  right: 20px;
-
-  width: 40px;
-  height: 40px;
-
-  background-color: #f5f2f0;
-}
-
-.page-button--up::before,
-.page-button--up::after {
+.page-button::before,
+.page-button::after {
   content: "";
 
   position: absolute;
@@ -22,16 +11,92 @@
   background-color: #000000;
 }
 
-.page-button--up::before {
+.page-button::before {
   top: 15px;
   left: 16px;
 
   transform: rotate(45deg);
 }
 
-.page-button--up::after {
+.page-button::after {
   top: 15px;
   left: 6px;
 
   transform: rotate(-45deg);
+}
+
+.page-button--left,
+.page-button--right {
+  position: fixed;
+  top: 35vh;
+  left: 403px;
+
+  width: 60px;
+  height: 230px;
+
+  background-color: transparent;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(245,242,240,1);
+  }
+}
+
+.page-button--right {
+  top: 35vh;
+  left: 1277px;
+}
+
+.page-button--right::before {
+  top: 104px;
+  left: 22px;
+
+  transform: rotate(-135deg);
+}
+
+.page-button--right::after {
+  top: 115px;
+  left: 22px;
+
+  transform: rotate(135deg);
+}
+
+.page-button--left::before {
+  top: 104px;
+  left: 20px;
+
+  transform: rotate(135deg);
+}
+
+.page-button--left::after {
+  top: 115px;
+  left: 20px;
+
+  transform: rotate(-135deg);
+}
+
+.page-button--disabled::before,
+.page-button--disabled::after {
+  opacity: 0.3;
+}
+
+.page-button--disabled {
+  cursor: default;
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+  }
+}
+
+.page-button--up {
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+
+  width: 40px;
+  height: 40px;
+
+  background-color: #f5f2f0;
 }
