@@ -1,30 +1,3 @@
-.page-button::before,
-.page-button::after {
-  content: "";
-
-  position: absolute;
-
-  width: 19px;
-  height: 5px;
-
-  border-radius: 50px;
-  background-color: #000000;
-}
-
-.page-button::before {
-  top: 15px;
-  left: 16px;
-
-  transform: rotate(45deg);
-}
-
-.page-button::after {
-  top: 15px;
-  left: 6px;
-
-  transform: rotate(-45deg);
-}
-
 .page-button--left,
 .page-button--right {
   position: fixed;
@@ -49,39 +22,33 @@
 }
 
 .page-button--right::before {
-  top: 104px;
+  content: "";
+  position: absolute;
+  top: 103px;
   left: 22px;
 
-  transform: rotate(-135deg);
-}
+  width: 15px;
+  height: 23px;
 
-.page-button--right::after {
-  top: 115px;
-  left: 22px;
-
-  transform: rotate(135deg);
+  background-image: url("../img/arrow.svg");
+  transform: rotate(180deg);
 }
 
 .page-button--left::before {
-  top: 104px;
-  left: 20px;
+  content: "";
+  position: absolute;
+  top: 103px;
+  left: 22px;
 
-  transform: rotate(135deg);
-}
+  width: 15px;
+  height: 23px;
 
-.page-button--left::after {
-  top: 115px;
-  left: 20px;
-
-  transform: rotate(-135deg);
-}
-
-.page-button--disabled::before,
-.page-button--disabled::after {
-  opacity: 0.3;
+  background-image: url("../img/arrow.svg");
 }
 
 .page-button--disabled {
+opacity: 0.3;
+
   cursor: default;
 
   &:hover,
@@ -99,4 +66,17 @@
   height: 40px;
 
   background-color: #f5f2f0;
+}
+
+.page-button--up::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 12px;
+
+  width: 15px;
+  height: 23px;
+
+  background-image: url("../img/arrow.svg");
+  transform: rotate(90deg);
 }
